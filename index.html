@@ -4,23 +4,140 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trending Trace</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitbook-style@0.1.0/gitbook.min.css" onerror="this.remove()">
 <style>
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #0d1117; color: #c9d1d9; }
-h1 { color: #58a6ff; border-bottom: 1px solid #30363d; }
-h2 { color: #79c0ff; }
-a { color: #58a6ff; }
-a:hover { color: #79c0ff; }
-ul { list-style: none; padding-left: 0; }
-li { padding: 8px 0; border-bottom: 1px solid #21262d; }
-.ts { color: #8b949e; font-size: 0.85em; }
+:root {
+  --sidebar-width: 260px;
+  --bg: #1a1a2e;
+  --sidebar-bg: #16213e;
+  --content-bg: #1a1a2e;
+  --text: #e0e0e0;
+  --text-muted: #8892b0;
+  --accent: #64ffda;
+  --accent2: #57cbff;
+  --border: #233554;
+  --hover-bg: #0a192f;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); height: 100vh; overflow: hidden; }
+.app { display: flex; height: 100vh; }
+.sidebar { width: var(--sidebar-width); background: var(--sidebar-bg); border-right: 1px solid var(--border); overflow-y: auto; padding: 20px 0; flex-shrink: 0; transition: transform 0.3s; }
+.sidebar-header { padding: 16px 20px; border-bottom: 1px solid var(--border); }
+.sidebar-header h1 { font-size: 18px; color: var(--accent); font-weight: 600; }
+.sidebar-header .ts { color: var(--text-muted); font-size: 12px; margin-top: 4px; }
+.sidebar-nav { padding: 12px 0; }
+.nav-section { padding: 8px 20px 4px; font-size: 13px; color: var(--text-muted); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+.nav-item { display: block; padding: 8px 20px; color: var(--text); font-size: 14px; cursor: pointer; border-left: 3px solid transparent; transition: all 0.15s; }
+.nav-item:hover { background: var(--hover-bg); color: var(--accent); }
+.nav-item.active { background: var(--hover-bg); color: var(--accent); border-left-color: var(--accent); }
+.nav-item .badge { font-size: 11px; color: var(--text-muted); margin-left: 6px; }
+.content { flex: 1; overflow-y: auto; padding: 40px 48px; max-width: 900px; }
+.content h1 { color: var(--accent); font-size: 28px; margin-bottom: 16px; border-bottom: 1px solid var(--border); padding-bottom: 12px; }
+.content h2 { color: var(--accent2); font-size: 20px; margin: 24px 0 12px; }
+.content h3 { color: var(--accent2); font-size: 16px; margin: 16px 0 8px; }
+.content p { line-height: 1.8; margin-bottom: 12px; }
+.content ul, .content ol { margin: 12px 0; padding-left: 24px; }
+.content li { margin-bottom: 6px; line-height: 1.6; }
+.content table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+.content th { background: var(--sidebar-bg); color: var(--accent2); padding: 10px 12px; text-align: left; border: 1px solid var(--border); }
+.content td { padding: 8px 12px; border: 1px solid var(--border); }
+.content tr:hover td { background: var(--hover-bg); }
+.content code { background: var(--sidebar-bg); padding: 2px 6px; border-radius: 3px; font-size: 13px; color: var(--accent); }
+.content pre { background: var(--sidebar-bg); padding: 16px; border-radius: 6px; overflow-x: auto; margin: 12px 0; border: 1px solid var(--border); }
+.content pre code { background: none; padding: 0; }
+.content a { color: var(--accent); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.content blockquote { border-left: 3px solid var(--accent); padding-left: 16px; color: var(--text-muted); margin: 12px 0; }
+.content hr { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
+.content strong { color: var(--accent); }
+.content img { max-width: 100%; }
+.empty-state { text-align: center; padding: 80px 40px; }
+.empty-state h2 { color: var(--text-muted); font-size: 24px; }
+.empty-state p { color: var(--text-muted); margin-top: 12px; }
+.menu-toggle { display: none; position: fixed; top: 12px; left: 12px; z-index: 100; background: var(--sidebar-bg); border: 1px solid var(--border); color: var(--accent); width: 36px; height: 36px; border-radius: 4px; cursor: pointer; font-size: 18px; }
+@media (max-width: 768px) {
+  .sidebar { position: fixed; left: 0; top: 0; height: 100vh; transform: translateX(-100%); z-index: 99; }
+  .sidebar.open { transform: translateX(0); }
+  .menu-toggle { display: flex; align-items: center; justify-content: center; }
+  .content { padding: 20px 16px; }
+}
 </style>
 </head>
 <body>
-<h1>Trending Trace</h1>
-<p class="ts">Last updated: 2026-07-02 12:04 UTC</p>
-<h2>Trending 报告</h2>
-<ul><li><a href="trending/2026-07-02-daily.md">2026-07-02-daily</a></li></ul>
-<h2>项目监控报告</h2>
-<ul><li>暂无报告</li></ul>
+<button class="menu-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">&#9776;</button>
+<div class="app">
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h1>Trending Trace</h1>
+      <div class="ts" id="updateTime"></div>
+    </div>
+    <div class="sidebar-nav" id="sidebarNav"></div>
+  </div>
+  <div class="content" id="contentArea">
+    <div class="empty-state">
+      <h2>Trending Trace</h2>
+      <p>GitHub 技术趋势追踪与项目监控报告</p>
+      <p>请从左侧选择一份报告</p>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+marked.setOptions({ breaks: true, gfm: true });
+
+async function loadManifest() {
+  const res = await fetch('manifest.json');
+  if (!res.ok) return { trending: [], projects: [], updated: '' };
+  return res.json();
+}
+
+function buildNav(manifest) {
+  const nav = document.getElementById('sidebarNav');
+  document.getElementById('updateTime').textContent = manifest.updated || '';
+  let html = '';
+  if (manifest.trending.length) {
+    html += '<div class="nav-section">Trending</div>';
+    manifest.trending.forEach(f => {
+      html += `<div class="nav-item" data-file="${f.path}" onclick="loadReport('${f.path}', this)">${f.title}<span class="badge">${f.date}</span></div>`;
+    });
+  }
+  if (manifest.projects.length) {
+    html += '<div class="nav-section">项目监控</div>';
+    manifest.projects.forEach(f => {
+      html += `<div class="nav-item" data-file="${f.path}" onclick="loadReport('${f.path}', this)">${f.title}<span class="badge">${f.date}</span></div>`;
+    });
+  }
+  if (!manifest.trending.length && !manifest.projects.length) {
+    html = '<div class="nav-item" style="opacity:0.5">暂无报告</div>';
+  }
+  nav.innerHTML = html;
+}
+
+async function loadReport(path, el) {
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  if (el) el.classList.add('active');
+  const res = await fetch(path);
+  if (!res.ok) {
+    document.getElementById('contentArea').innerHTML = '<div class="empty-state"><h2>加载失败</h2></div>';
+    return;
+  }
+  const md = await res.text();
+  document.getElementById('contentArea').innerHTML = marked.parse(md);
+  document.querySelector('.sidebar').classList.remove('open');
+}
+
+async function init() {
+  const manifest = await loadManifest();
+  buildNav(manifest);
+  const all = [...manifest.trending, ...manifest.projects];
+  if (all.length) {
+    const latest = all[0];
+    const firstItem = document.querySelector(`[data-file="${latest.path}"]`);
+    loadReport(latest.path, firstItem);
+  }
+}
+
+init();
+</script>
 </body>
 </html>
