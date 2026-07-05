@@ -2,25 +2,30 @@
   - [简介](/README.md)
 
 - **Trending**
+  - [GitHub Trending (daily)](trending/2026-07-05-daily.md)
   - [GitHub Trending (daily)](trending/2026-07-04-daily.md)
   - [GitHub Trending (daily)](trending/2026-07-03-daily.md)
   - [GitHub Trending (daily)](trending/2026-07-02-daily.md)
 
 - **项目动态**
-  - **vllm-project/vllm-ascend**
-    - [2026-07-04 01:36](projects/2026-07-04T01-36-vllm-project-vllm-ascend.md)
-    - [2026-07-03 06:42](projects/2026-07-03T06-42-vllm-project-vllm-ascend.md)
-    - [2026-07-02 14:09](projects/2026-07-02T14-09-vllm-project-vllm-ascend.md)
-    - [2026-07-02 12:56](projects/2026-07-02T12-56-vllm-project-vllm-ascend.md)
   - **vllm-project/vllm**
+    - [2026-07-05 01:33](projects/2026-07-05T01-33-vllm-project-vllm.md)
     - [2026-07-04 01:35](projects/2026-07-04T01-35-vllm-project-vllm.md)
     - [2026-07-03 06:41](projects/2026-07-03T06-41-vllm-project-vllm.md)
     - [2026-07-02 14:09](projects/2026-07-02T14-09-vllm-project-vllm.md)
     - [2026-07-02 12:55](projects/2026-07-02T12-55-vllm-project-vllm.md)
+  - **vllm-project/vllm-ascend**
+    - [2026-07-05 01:33](projects/2026-07-05T01-33-vllm-project-vllm-ascend.md)
+    - [2026-07-04 01:36](projects/2026-07-04T01-36-vllm-project-vllm-ascend.md)
+    - [2026-07-03 06:42](projects/2026-07-03T06-42-vllm-project-vllm-ascend.md)
+    - [2026-07-02 14:09](projects/2026-07-02T14-09-vllm-project-vllm-ascend.md)
+    - [2026-07-02 12:56](projects/2026-07-02T12-56-vllm-project-vllm-ascend.md)
   - **verl-project/verl**
+    - [2026-07-05 01:32](projects/2026-07-05T01-32-verl-project-verl.md)
     - [2026-07-04 01:33](projects/2026-07-04T01-33-verl-project-verl.md)
     - [2026-07-03 06:41](projects/2026-07-03T06-41-verl-project-verl.md)
     - [2026-07-02 14:08](projects/2026-07-02T14-08-verl-project-verl.md)
     - [2026-07-02 12:55](projects/2026-07-02T12-55-verl-project-verl.md)
   - **verl-project/verl-recipe**
+    - [2026-07-05 01:32](projects/2026-07-05T01-32-verl-project-verl-recipe.md)
     - [2026-07-04 01:33](projects/2026-07-04T01-33-verl-project-verl-recipe.md)
