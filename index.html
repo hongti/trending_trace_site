@@ -26,6 +26,116 @@
     .sidebar-nav > ul > li > ul > li > p { font-weight: 600; }
     .sidebar-nav > ul > li > ul > li > ul > li > p { font-weight: 600; font-size: 13px; }
     .sidebar-nav > ul > li > ul > li > ul > li > ul > li > a { font-size: 13px; }
+    /* Date switcher injected above the article body */
+    .date-switcher {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 24px;
+      padding: 12px 14px;
+      background: #f5f7f9;
+      border: 1px solid #e0e4e8;
+      border-radius: 8px;
+    }
+    .date-switcher .ds-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #666;
+      margin-right: 2px;
+    }
+    .date-switcher .ds-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      font-size: 13px;
+      line-height: 1.4;
+      color: #2980b9;
+      text-decoration: none;
+      background: #fff;
+      border: 1px solid #d0d7de;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background .15s, border-color .15s;
+    }
+    .date-switcher .ds-pill:hover { border-color: #2980b9; }
+    .date-switcher .ds-pill.active {
+      background: #2980b9;
+      border-color: #2980b9;
+      color: #fff;
+      font-weight: 600;
+    }
+    .date-switcher .ds-pill .ds-tag {
+      font-size: 11px;
+      padding: 0 5px;
+      border-radius: 999px;
+      background: #eef3f8;
+      color: #2980b9;
+    }
+    .date-switcher .ds-pill.active .ds-tag { background: rgba(255,255,255,.25); color: #fff; }
+    .date-switcher select.ds-more {
+      margin-left: auto;
+      font-size: 13px;
+      padding: 4px 8px;
+      color: #444;
+      background: #fff;
+      border: 1px solid #d0d7de;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    /* Floating right-side table of contents */
+    .page-toc {
+      position: fixed;
+      top: 90px;
+      right: 24px;
+      width: 200px;
+      max-height: calc(100vh - 130px);
+      overflow-y: auto;
+      padding: 12px 14px;
+      font-size: 13px;
+      background: #f5f7f9;
+      border: 1px solid #e0e4e8;
+      border-radius: 8px;
+      z-index: 10;
+    }
+    .page-toc-title {
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: .04em;
+      color: #888;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .page-toc ul { list-style: none; margin: 0; padding: 0; }
+    .page-toc li { margin: 0; }
+    .page-toc li.lvl-h3 { padding-left: 12px; }
+    .page-toc a {
+      display: block;
+      padding: 3px 8px;
+      color: #666;
+      text-decoration: none;
+      border-left: 2px solid transparent;
+      border-radius: 0 4px 4px 0;
+      line-height: 1.4;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: color .15s, border-color .15s, background .15s;
+    }
+    .page-toc a:hover { color: #2980b9; background: rgba(41,128,185,.06); }
+    .page-toc a.active {
+      color: #2980b9;
+      font-weight: 600;
+      border-left-color: #2980b9;
+      background: rgba(41,128,185,.08);
+    }
+    /* Give the content room for the TOC on wide screens; hide TOC when cramped.
+       The article is centered at --content-max-width, so on mid-wide viewports its
+       right edge slides under the fixed TOC. Reserve a right gutter on .content so
+       the centered column shifts left and clears the TOC (200px + 24px + gap). */
+    @media (min-width: 1301px) { .content { padding-right: 260px; } }
+    @media (max-width: 1300px) { .page-toc { display: none; } }
     .markdown-section h1 { border-bottom: 2px solid #2980b9; padding-bottom: 8px; }
     .markdown-section table { border-collapse: collapse; width: 100%; }
     .markdown-section th { background: #f5f7f9; }
@@ -34,18 +144,229 @@
       :root { --sidebar-background: #1b1b1b; --sidebar-border-color: #333; }
       .markdown-section th { background: #252525; }
       .markdown-section td, .markdown-section th { border-color: #444; }
+      .date-switcher { background: #1b1b1b; border-color: #333; }
+      .date-switcher .ds-label { color: #999; }
+      .date-switcher .ds-pill { background: #252525; border-color: #444; color: #6cb6e8; }
+      .date-switcher .ds-pill:hover { border-color: #6cb6e8; }
+      .date-switcher .ds-pill.active { background: #2980b9; border-color: #2980b9; color: #fff; }
+      .date-switcher .ds-pill .ds-tag { background: #2f3b45; color: #6cb6e8; }
+      .date-switcher select.ds-more { background: #252525; border-color: #444; color: #ccc; }
+      .page-toc { background: #1b1b1b; border-color: #333; }
+      .page-toc-title { color: #777; }
+      .page-toc a { color: #aaa; }
+      .page-toc a:hover { color: #6cb6e8; background: rgba(108,182,232,.08); }
+      .page-toc a.active { color: #6cb6e8; border-left-color: #6cb6e8; background: rgba(108,182,232,.12); }
     }
   </style>
 </head>
 <body>
   <div id="app"></div>
   <script>
+    // Date-switcher plugin: renders a pill bar + dropdown above the article so the
+    // sidebar only needs one link per group. Data comes from manifest.json.
+    var dateSwitcherPlugin = (function () {
+      var RECENT = 7;            // number of days shown as inline pills
+      var manifest = null;       // { groups: [{ section, label, dates:[{date, path}] }] }
+
+      function normalize(p) {
+        // Strip a leading "#", "/" or "#/", any query/anchor, and a trailing ".md"
+        // so manifest paths (e.g. "trending/2026-07-07-daily.md") compare cleanly
+        // against docsify routes, which drop the ".md" extension.
+        return (p || '')
+          .replace(/^#/, '')
+          .replace(/[?#].*$/, '')
+          .replace(/^\/+/, '')
+          .replace(/\.md$/, '');
+      }
+
+      function findGroup(currentPath) {
+        if (!manifest) return null;
+        var cur = normalize(currentPath);
+        for (var i = 0; i < manifest.groups.length; i++) {
+          var g = manifest.groups[i];
+          for (var j = 0; j < g.dates.length; j++) {
+            if (normalize(g.dates[j].path) === cur) {
+              return { group: g, index: j };
+            }
+          }
+        }
+        return null;
+      }
+
+      function buildTags(dates) {
+        // Map date string -> tag using calendar distance from today (local time).
+        var tags = {};
+        var today = new Date();
+        today.setHours(0, 0, 0, 0);
+        for (var i = 0; i < dates.length; i++) {
+          var parts = dates[i].date.split('-');
+          if (parts.length !== 3) continue;
+          var d = new Date(+parts[0], +parts[1] - 1, +parts[2]);
+          d.setHours(0, 0, 0, 0);
+          var diff = Math.round((today - d) / 86400000);
+          if (diff === 0) tags[dates[i].date] = '今天';
+          else if (diff === 1) tags[dates[i].date] = '昨天';
+        }
+        return tags;
+      }
+
+      function render(found) {
+        var group = found.group;
+        var activeIdx = found.index;
+        var dates = group.dates; // already newest-first
+        var tags = buildTags(dates);
+
+        var bar = document.createElement('div');
+        bar.className = 'date-switcher';
+
+        var label = document.createElement('span');
+        label.className = 'ds-label';
+        label.textContent = group.label + ' · ';
+        bar.appendChild(label);
+
+        var recent = dates.slice(0, RECENT);
+        recent.forEach(function (d, i) {
+          var pill = document.createElement('a');
+          pill.className = 'ds-pill' + (i === activeIdx ? ' active' : '');
+          pill.href = '#/' + normalize(d.path);
+          pill.textContent = d.date;
+          if (tags[d.date]) {
+            var tag = document.createElement('span');
+            tag.className = 'ds-tag';
+            tag.textContent = tags[d.date];
+            pill.appendChild(tag);
+          }
+          bar.appendChild(pill);
+        });
+
+        // Everything older than the recent window (or the full history) goes into a
+        // dropdown so the bar length stays bounded.
+        if (dates.length > RECENT) {
+          var sel = document.createElement('select');
+          sel.className = 'ds-more';
+          var placeholder = document.createElement('option');
+          placeholder.textContent = '更早…';
+          placeholder.value = '';
+          sel.appendChild(placeholder);
+          dates.forEach(function (d) {
+            var opt = document.createElement('option');
+            opt.value = '#/' + normalize(d.path);
+            opt.textContent = d.date + (tags[d.date] ? ' (' + tags[d.date] + ')' : '');
+            if (normalize(d.path) === normalize(dates[activeIdx].path)) opt.selected = true;
+            sel.appendChild(opt);
+          });
+          sel.addEventListener('change', function () {
+            if (sel.value) window.location.hash = sel.value;
+          });
+          bar.appendChild(sel);
+        }
+
+        return bar;
+      }
+
+      return function (hook, vm) {
+        hook.beforeEach(function (content, next) {
+          if (manifest) return next(content);
+          // Fetch manifest once, then continue rendering regardless of outcome.
+          fetch('manifest.json')
+            .then(function (r) { return r.ok ? r.json() : null; })
+            .then(function (data) { manifest = data || { groups: [] }; })
+            .catch(function () { manifest = { groups: [] }; })
+            .then(function () { next(content); });
+        });
+
+        hook.doneEach(function () {
+          var section = document.querySelector('.markdown-section');
+          if (!section) return;
+          var existing = section.querySelector('.date-switcher');
+          if (existing) existing.remove();
+          var found = findGroup(vm.route.path);
+          if (!found || found.group.dates.length <= 1) return;
+          var bar = render(found);
+          section.insertBefore(bar, section.firstChild);
+        });
+      };
+    })();
+
+    // TOC plugin: builds a floating "本页目录" from the article's h2/h3 headings and
+    // pins it to the right of the content, so page navigation no longer bloats the
+    // sidebar. Scroll-spy highlights the current section; hidden on narrow screens.
+    var tocPlugin = (function () {
+      var container = null;
+      var spyCleanup = null;
+
+      function slugFromHeading(h) {
+        // docsify assigns each heading a data-id / anchor; reuse it for links.
+        var a = h.querySelector('a.anchor');
+        if (a) {
+          var href = a.getAttribute('href') || '';
+          var hashIdx = href.indexOf('?id=');
+          if (hashIdx !== -1) return href.slice(hashIdx);
+        }
+        return h.id ? '?id=' + h.id : null;
+      }
+
+      function build() {
+        if (container) { container.remove(); container = null; }
+        if (spyCleanup) { spyCleanup(); spyCleanup = null; }
+
+        var section = document.querySelector('.markdown-section');
+        if (!section) return;
+        var headings = section.querySelectorAll('h2, h3');
+        if (headings.length < 2) return; // not worth a TOC
+
+        container = document.createElement('nav');
+        container.className = 'page-toc';
+        var title = document.createElement('div');
+        title.className = 'page-toc-title';
+        title.textContent = '本页目录';
+        container.appendChild(title);
+
+        var list = document.createElement('ul');
+        var links = [];
+        var base = window.location.hash.split('?')[0];
+        headings.forEach(function (h) {
+          var anchor = slugFromHeading(h);
+          if (!anchor) return;
+          var li = document.createElement('li');
+          li.className = 'lvl-' + h.tagName.toLowerCase();
+          var a = document.createElement('a');
+          a.href = base + anchor;
+          a.textContent = h.textContent.replace(/\s+$/, '');
+          li.appendChild(a);
+          list.appendChild(li);
+          links.push({ a: a, h: h });
+        });
+        if (!links.length) { container = null; return; }
+        container.appendChild(list);
+        document.body.appendChild(container);
+
+        // Scroll-spy: highlight the heading nearest the top of the viewport.
+        function onScroll() {
+          var current = links[0];
+          for (var i = 0; i < links.length; i++) {
+            var rect = links[i].h.getBoundingClientRect();
+            if (rect.top - 90 <= 0) current = links[i];
+            else break;
+          }
+          links.forEach(function (l) { l.a.classList.toggle('active', l === current); });
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        spyCleanup = function () { window.removeEventListener('scroll', onScroll); };
+        onScroll();
+      }
+
+      return function (hook) {
+        hook.doneEach(function () { build(); });
+      };
+    })();
+
     window.$docsify = {
       name: 'Trending Trace',
       nameLink: '/README.md',
       loadSidebar: '_sidebar.md',
-      subMaxLevel: 3,
       auto2top: true,
+      plugins: [dateSwitcherPlugin, tocPlugin],
       search: {
         paths: 'auto',
         placeholder: '搜索',
