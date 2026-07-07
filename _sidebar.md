@@ -10,30 +10,33 @@
     - [2026-07-03](trending/2026-07-03-daily.md)
     - [2026-07-02](trending/2026-07-02-daily.md)
 
+- **arXiv 论文**
+  - [2026-07-07](arxiv/2026-07-07-arxiv.md)
+
 - **项目动态**
-  - **vllm-project/vllm**
-    - [2026-07-07](projects/2026-07-07T01-12-vllm-project-vllm.md)
-    - [2026-07-06](projects/2026-07-06T05-22-vllm-project-vllm.md)
-    - [2026-07-05](projects/2026-07-05T01-33-vllm-project-vllm.md)
-    - [2026-07-04](projects/2026-07-04T01-35-vllm-project-vllm.md)
-    - [2026-07-03](projects/2026-07-03T06-41-vllm-project-vllm.md)
-    - [2026-07-02](projects/2026-07-02T14-09-vllm-project-vllm.md)
   - **vllm-project/vllm-ascend**
-    - [2026-07-07](projects/2026-07-07T01-12-vllm-project-vllm-ascend.md)
+    - [2026-07-07](projects/2026-07-07T03-40-vllm-project-vllm-ascend.md)
     - [2026-07-06](projects/2026-07-06T05-22-vllm-project-vllm-ascend.md)
     - [2026-07-05](projects/2026-07-05T01-33-vllm-project-vllm-ascend.md)
     - [2026-07-04](projects/2026-07-04T01-36-vllm-project-vllm-ascend.md)
     - [2026-07-03](projects/2026-07-03T06-42-vllm-project-vllm-ascend.md)
     - [2026-07-02](projects/2026-07-02T14-09-vllm-project-vllm-ascend.md)
+  - **vllm-project/vllm**
+    - [2026-07-07](projects/2026-07-07T03-39-vllm-project-vllm.md)
+    - [2026-07-06](projects/2026-07-06T05-22-vllm-project-vllm.md)
+    - [2026-07-05](projects/2026-07-05T01-33-vllm-project-vllm.md)
+    - [2026-07-04](projects/2026-07-04T01-35-vllm-project-vllm.md)
+    - [2026-07-03](projects/2026-07-03T06-41-vllm-project-vllm.md)
+    - [2026-07-02](projects/2026-07-02T14-09-vllm-project-vllm.md)
   - **verl-project/verl**
-    - [2026-07-07](projects/2026-07-07T01-11-verl-project-verl.md)
+    - [2026-07-07](projects/2026-07-07T03-38-verl-project-verl.md)
     - [2026-07-06](projects/2026-07-06T05-21-verl-project-verl.md)
     - [2026-07-05](projects/2026-07-05T01-32-verl-project-verl.md)
     - [2026-07-04](projects/2026-07-04T01-33-verl-project-verl.md)
     - [2026-07-03](projects/2026-07-03T06-41-verl-project-verl.md)
     - [2026-07-02](projects/2026-07-02T14-08-verl-project-verl.md)
   - **verl-project/verl-recipe**
-    - [2026-07-07](projects/2026-07-07T01-11-verl-project-verl-recipe.md)
+    - [2026-07-07](projects/2026-07-07T03-38-verl-project-verl-recipe.md)
     - [2026-07-06](projects/2026-07-06T05-21-verl-project-verl-recipe.md)
     - [2026-07-05](projects/2026-07-05T01-32-verl-project-verl-recipe.md)
     - [2026-07-04](projects/2026-07-04T01-33-verl-project-verl-recipe.md)
