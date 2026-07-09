@@ -5,6 +5,10 @@
       "label": "Daily",
       "dates": [
         {
+          "date": "2026-07-09",
+          "path": "trending/2026-07-09-daily.md"
+        },
+        {
           "date": "2026-07-08",
           "path": "trending/2026-07-08-daily.md"
         },
@@ -39,6 +43,10 @@
       "label": "arXiv 论文",
       "dates": [
         {
+          "date": "2026-07-09",
+          "path": "arxiv/2026-07-09-arxiv.md"
+        },
+        {
           "date": "2026-07-08",
           "path": "arxiv/2026-07-08-arxiv.md"
         },
@@ -50,42 +58,12 @@
     },
     {
       "section": "projects",
-      "label": "vllm-project/vllm-ascend",
-      "dates": [
-        {
-          "date": "2026-07-08",
-          "path": "projects/2026-07-08T01-06-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-07",
-          "path": "projects/2026-07-07T09-11-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-06",
-          "path": "projects/2026-07-06T05-22-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-05",
-          "path": "projects/2026-07-05T01-33-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-04",
-          "path": "projects/2026-07-04T01-36-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-03",
-          "path": "projects/2026-07-03T06-42-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-02",
-          "path": "projects/2026-07-02T14-09-vllm-project-vllm-ascend.md"
-        }
-      ]
-    },
-    {
-      "section": "projects",
       "label": "vllm-project/vllm",
       "dates": [
+        {
+          "date": "2026-07-09",
+          "path": "projects/2026-07-09T01-11-vllm-project-vllm.md"
+        },
         {
           "date": "2026-07-08",
           "path": "projects/2026-07-08T01-05-vllm-project-vllm.md"
@@ -118,8 +96,50 @@
     },
     {
       "section": "projects",
+      "label": "vllm-project/vllm-ascend",
+      "dates": [
+        {
+          "date": "2026-07-09",
+          "path": "projects/2026-07-09T01-11-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-08",
+          "path": "projects/2026-07-08T01-06-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-07",
+          "path": "projects/2026-07-07T09-11-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-06",
+          "path": "projects/2026-07-06T05-22-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-05",
+          "path": "projects/2026-07-05T01-33-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-04",
+          "path": "projects/2026-07-04T01-36-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-03",
+          "path": "projects/2026-07-03T06-42-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-02",
+          "path": "projects/2026-07-02T14-09-vllm-project-vllm-ascend.md"
+        }
+      ]
+    },
+    {
+      "section": "projects",
       "label": "verl-project/verl",
       "dates": [
+        {
+          "date": "2026-07-09",
+          "path": "projects/2026-07-09T01-09-verl-project-verl.md"
+        },
         {
           "date": "2026-07-08",
           "path": "projects/2026-07-08T01-04-verl-project-verl.md"
@@ -154,6 +174,10 @@
       "section": "projects",
       "label": "verl-project/verl-recipe",
       "dates": [
+        {
+          "date": "2026-07-09",
+          "path": "projects/2026-07-09T01-09-verl-project-verl-recipe.md"
+        },
         {
           "date": "2026-07-08",
           "path": "projects/2026-07-08T01-04-verl-project-verl-recipe.md"
