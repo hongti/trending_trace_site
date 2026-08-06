@@ -5,6 +5,10 @@
       "label": "Daily",
       "dates": [
         {
+          "date": "2026-08-06",
+          "path": "trending/2026-08-06-daily.md"
+        },
+        {
           "date": "2026-08-05",
           "path": "trending/2026-08-05-daily.md"
         },
@@ -151,6 +155,10 @@
       "label": "arXiv 论文",
       "dates": [
         {
+          "date": "2026-08-06",
+          "path": "arxiv/2026-08-06-arxiv.md"
+        },
+        {
           "date": "2026-08-05",
           "path": "arxiv/2026-08-05-arxiv.md"
         },
@@ -276,6 +284,10 @@
       "section": "projects",
       "label": "vllm-project/vllm-ascend",
       "dates": [
+        {
+          "date": "2026-08-06",
+          "path": "projects/2026-08-06T03-53-vllm-project-vllm-ascend.md"
+        },
         {
           "date": "2026-08-05",
           "path": "projects/2026-08-05T01-02-vllm-project-vllm-ascend.md"
@@ -423,6 +435,10 @@
       "label": "vllm-project/vllm",
       "dates": [
         {
+          "date": "2026-08-06",
+          "path": "projects/2026-08-06T03-52-vllm-project-vllm.md"
+        },
+        {
           "date": "2026-08-05",
           "path": "projects/2026-08-05T01-01-vllm-project-vllm.md"
         },
@@ -569,6 +585,10 @@
       "label": "verl-project/verl",
       "dates": [
         {
+          "date": "2026-08-06",
+          "path": "projects/2026-08-06T03-52-verl-project-verl.md"
+        },
+        {
           "date": "2026-08-05",
           "path": "projects/2026-08-05T01-00-verl-project-verl.md"
         },
@@ -714,6 +734,10 @@
       "section": "projects",
       "label": "verl-project/verl-recipe",
       "dates": [
+        {
+          "date": "2026-08-06",
+          "path": "projects/2026-08-06T03-52-verl-project-verl-recipe.md"
+        },
         {
           "date": "2026-08-05",
           "path": "projects/2026-08-05T01-00-verl-project-verl-recipe.md"
