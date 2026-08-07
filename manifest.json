@@ -5,6 +5,10 @@
       "label": "Daily",
       "dates": [
         {
+          "date": "2026-08-07",
+          "path": "trending/2026-08-07-daily.md"
+        },
+        {
           "date": "2026-08-06",
           "path": "trending/2026-08-06-daily.md"
         },
@@ -155,6 +159,10 @@
       "label": "arXiv 论文",
       "dates": [
         {
+          "date": "2026-08-07",
+          "path": "arxiv/2026-08-07-arxiv.md"
+        },
+        {
           "date": "2026-08-06",
           "path": "arxiv/2026-08-06-arxiv.md"
         },
@@ -282,158 +290,12 @@
     },
     {
       "section": "projects",
-      "label": "vllm-project/vllm-ascend",
-      "dates": [
-        {
-          "date": "2026-08-06",
-          "path": "projects/2026-08-06T03-53-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-08-05",
-          "path": "projects/2026-08-05T01-02-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-08-04",
-          "path": "projects/2026-08-04T01-04-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-08-03",
-          "path": "projects/2026-08-03T01-06-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-08-02",
-          "path": "projects/2026-08-02T01-06-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-08-01",
-          "path": "projects/2026-08-01T01-05-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-31",
-          "path": "projects/2026-07-31T01-06-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-30",
-          "path": "projects/2026-07-30T01-01-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-29",
-          "path": "projects/2026-07-29T01-04-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-28",
-          "path": "projects/2026-07-28T01-02-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-27",
-          "path": "projects/2026-07-27T01-07-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-26",
-          "path": "projects/2026-07-26T01-07-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-25",
-          "path": "projects/2026-07-25T01-05-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-24",
-          "path": "projects/2026-07-24T01-04-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-23",
-          "path": "projects/2026-07-23T01-07-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-22",
-          "path": "projects/2026-07-22T01-04-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-21",
-          "path": "projects/2026-07-21T01-04-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-20",
-          "path": "projects/2026-07-20T02-53-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-19",
-          "path": "projects/2026-07-19T01-05-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-18",
-          "path": "projects/2026-07-18T01-04-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-17",
-          "path": "projects/2026-07-17T01-06-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-16",
-          "path": "projects/2026-07-16T01-04-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-15",
-          "path": "projects/2026-07-15T01-01-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-14",
-          "path": "projects/2026-07-14T12-28-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-13",
-          "path": "projects/2026-07-13T01-07-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-12",
-          "path": "projects/2026-07-12T01-06-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-11",
-          "path": "projects/2026-07-11T01-04-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-10",
-          "path": "projects/2026-07-10T03-23-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-09",
-          "path": "projects/2026-07-09T01-11-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-08",
-          "path": "projects/2026-07-08T01-06-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-07",
-          "path": "projects/2026-07-07T09-11-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-06",
-          "path": "projects/2026-07-06T05-22-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-05",
-          "path": "projects/2026-07-05T01-33-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-04",
-          "path": "projects/2026-07-04T01-36-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-03",
-          "path": "projects/2026-07-03T06-42-vllm-project-vllm-ascend.md"
-        },
-        {
-          "date": "2026-07-02",
-          "path": "projects/2026-07-02T14-09-vllm-project-vllm-ascend.md"
-        }
-      ]
-    },
-    {
-      "section": "projects",
       "label": "vllm-project/vllm",
       "dates": [
+        {
+          "date": "2026-08-07",
+          "path": "projects/2026-08-07T03-32-vllm-project-vllm.md"
+        },
         {
           "date": "2026-08-06",
           "path": "projects/2026-08-06T03-52-vllm-project-vllm.md"
@@ -582,8 +444,166 @@
     },
     {
       "section": "projects",
+      "label": "vllm-project/vllm-ascend",
+      "dates": [
+        {
+          "date": "2026-08-07",
+          "path": "projects/2026-08-07T03-32-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-08-06",
+          "path": "projects/2026-08-06T03-53-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-08-05",
+          "path": "projects/2026-08-05T01-02-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-08-04",
+          "path": "projects/2026-08-04T01-04-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-08-03",
+          "path": "projects/2026-08-03T01-06-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-08-02",
+          "path": "projects/2026-08-02T01-06-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-08-01",
+          "path": "projects/2026-08-01T01-05-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-31",
+          "path": "projects/2026-07-31T01-06-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-30",
+          "path": "projects/2026-07-30T01-01-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-29",
+          "path": "projects/2026-07-29T01-04-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-28",
+          "path": "projects/2026-07-28T01-02-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-27",
+          "path": "projects/2026-07-27T01-07-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-26",
+          "path": "projects/2026-07-26T01-07-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-25",
+          "path": "projects/2026-07-25T01-05-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-24",
+          "path": "projects/2026-07-24T01-04-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-23",
+          "path": "projects/2026-07-23T01-07-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-22",
+          "path": "projects/2026-07-22T01-04-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-21",
+          "path": "projects/2026-07-21T01-04-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-20",
+          "path": "projects/2026-07-20T02-53-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-19",
+          "path": "projects/2026-07-19T01-05-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-18",
+          "path": "projects/2026-07-18T01-04-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-17",
+          "path": "projects/2026-07-17T01-06-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-16",
+          "path": "projects/2026-07-16T01-04-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-15",
+          "path": "projects/2026-07-15T01-01-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-14",
+          "path": "projects/2026-07-14T12-28-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-13",
+          "path": "projects/2026-07-13T01-07-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-12",
+          "path": "projects/2026-07-12T01-06-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-11",
+          "path": "projects/2026-07-11T01-04-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-10",
+          "path": "projects/2026-07-10T03-23-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-09",
+          "path": "projects/2026-07-09T01-11-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-08",
+          "path": "projects/2026-07-08T01-06-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-07",
+          "path": "projects/2026-07-07T09-11-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-06",
+          "path": "projects/2026-07-06T05-22-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-05",
+          "path": "projects/2026-07-05T01-33-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-04",
+          "path": "projects/2026-07-04T01-36-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-03",
+          "path": "projects/2026-07-03T06-42-vllm-project-vllm-ascend.md"
+        },
+        {
+          "date": "2026-07-02",
+          "path": "projects/2026-07-02T14-09-vllm-project-vllm-ascend.md"
+        }
+      ]
+    },
+    {
+      "section": "projects",
       "label": "verl-project/verl",
       "dates": [
+        {
+          "date": "2026-08-07",
+          "path": "projects/2026-08-07T03-31-verl-project-verl.md"
+        },
         {
           "date": "2026-08-06",
           "path": "projects/2026-08-06T03-52-verl-project-verl.md"
@@ -734,6 +754,10 @@
       "section": "projects",
       "label": "verl-project/verl-recipe",
       "dates": [
+        {
+          "date": "2026-08-07",
+          "path": "projects/2026-08-07T03-31-verl-project-verl-recipe.md"
+        },
         {
           "date": "2026-08-06",
           "path": "projects/2026-08-06T03-52-verl-project-verl-recipe.md"
