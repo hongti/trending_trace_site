@@ -5,7 +5,7 @@
   - [Daily](trending/2026-08-27-daily.md)
 
 - **arXiv 论文**
-  - [Daily](arxiv/2026-08-27-arxiv.md)
+  - [Daily](arxiv/2026-08-28-arxiv.md)
 
 - **项目动态**
   - [vllm-project/vllm](projects/2026-08-27T10-11-vllm-project-vllm.md)
