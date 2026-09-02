@@ -239,6 +239,10 @@
       "label": "arXiv 论文",
       "dates": [
         {
+          "date": "2026-09-02",
+          "path": "arxiv/2026-09-02-arxiv.md"
+        },
+        {
           "date": "2026-09-01",
           "path": "arxiv/2026-09-01-arxiv.md"
         },
