@@ -2,13 +2,13 @@
   - [简介](/README.md)
 
 - **Trending**
-  - [Daily](trending/2026-11-25-daily.md)
+  - [Daily](trending/2026-11-26-daily.md)
 
 - **arXiv 论文**
-  - [Daily](arxiv/2026-11-25-arxiv.md)
+  - [Daily](arxiv/2026-11-26-arxiv.md)
 
 - **项目动态**
-  - [vllm-project/vllm](projects/2026-11-25T09-00-vllm-project-vllm.md)
-  - [vllm-project/vllm-ascend](projects/2026-11-25T09-00-vllm-project-vllm-ascend.md)
-  - [verl-project/verl](projects/2026-11-25T09-00-verl-project-verl.md)
-  - [verl-project/verl-recipe](projects/2026-11-25T09-00-verl-project-verl-recipe.md)
+  - [vllm-project/vllm-ascend](projects/2026-11-26T08-47-vllm-project-vllm-ascend.md)
+  - [vllm-project/vllm](projects/2026-11-26T08-46-vllm-project-vllm.md)
+  - [verl-project/verl](projects/2026-11-26T08-46-verl-project-verl.md)
+  - [verl-project/verl-recipe](projects/2026-11-26T08-46-verl-project-verl-recipe.md)
